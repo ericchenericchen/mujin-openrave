@@ -39,7 +39,7 @@ option(OPT_VIDEORECORDING "Enable video recording" ON)
 option(OPT_PLUGINS "Build the pluings" ON)
 option(OPT_DOUBLE_PRECISION "Use double precision" ON)
 option(OPT_ACCURATEMATH "Use accurate and robust math to account for floating-point errors" ON)
-option(OPT_PYTHON "Build python bindings" ON)
+option(OPT_PYTHON "Build python bindings" OFF) #EC: DISABLE
 option(OPT_PYTHON3 "Build python bindings" ON)
 option(OPT_OCTAVE "Build octave bindings" ON)
 option(OPT_MATLAB "Build matlab bindings" ON)
@@ -56,7 +56,7 @@ option(OPT_IKFAST_FLOAT32 "Set to ON to allow loading of ikfast shared objects c
 option(OPT_FLANN "Temporary switch to force building of flann" OFF)
 option(OPT_CBINDINGS "Build the C-bindings libraries libopenrave_c and libopenrave-core_c" ON)
 option(OPT_LOG4CXX "Use log4cxx for logging" ON)
-option(OPT_MSGPACK "Support msgpack format" ON)
+option(OPT_MSGPACK "Support msgpack format" OFF) #EC: DISABLE
 option(OPT_CURL "Use curl for downloading resources" ON)
 option(OPT_INSTALL_3DMODELDATA "If ON, then install the 3D model data." ON)
 option(OPT_EXTRA_ROBOTS "If ON, then install extra robots as part of 3D model data" ON)
@@ -64,7 +64,7 @@ option(OPT_ENVIRONMENT_RECURSIVE_LOCK "Use recursive mutex for the Environment. 
 option(OPT_ENVIRONMENT_RECURSIVE_LOCK_WITH_GIL_CHECK "Use recursive mutex with GIL check for the Environment. Defaults to OFF." OFF)
 option(OPT_STATIC_PLUGINS "Statically compile in plugins" OFF)
 option(OPT_PIC "Build position independent code" ON)
-option(OPT_ENCRYPTION "Robot and KinBody encryption backed by GPG." ON)
+option(OPT_ENCRYPTION "Robot and KinBody encryption backed by GPG." OFF) #EC: DISABLE
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ${OPT_PIC})
 
