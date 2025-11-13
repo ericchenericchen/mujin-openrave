@@ -179,7 +179,7 @@ private:
                     child.reset(new btCylinderShapeZ(btVector3(geom->GetCylinderRadius(),geom->GetCylinderRadius(),geom->GetCylinderHeight()*0.5f)));
                     break;
                 case GT_Capsule:
-                    child.reset(new btCapsuleShapeZ(geom->GetCapsuleRadius(), geom->GetCapsuleHeight());
+                    child.reset(new btCapsuleShapeZ(geom->GetCapsuleRadius(), geom->GetCapsuleHeight()));
                     break;
                 case GT_Prism:
                 case GT_ConicalFrustum:
@@ -446,7 +446,7 @@ private:
     void _Synchronize(KinBodyInfoPtr pinfo)
     {
         vector<Transform> vtrans;
-        std::vector<int> dofbranches;
+        std::vector<dReal> dofbranches;
         pinfo->pbody->GetLinkTransformations(vtrans,dofbranches);
         pinfo->nLastStamp = pinfo->pbody->GetUpdateStamp();
         BOOST_ASSERT( vtrans.size() == pinfo->vlinks.size() );
